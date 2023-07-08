@@ -12,4 +12,16 @@ def load_video(video_filename: str):
     video_filename: str
         Path where the video file is located.
     """
-    return cv2.VideoCapture(video_filename)
+    video_streamer = cv2.VideoCapture(video_filename)
+    frame_index = 0
+    frame = None
+    while True:
+        there_are_more_frames, frame = video_streamer.read()
+        if not there_are_more_frames:
+            break
+
+        yield frame_index, frame
+        frame_index += 1
+
+    video_streamer.release()
+    yield frame_index, frame
