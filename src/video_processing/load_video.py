@@ -18,10 +18,8 @@ def load_video(video_filename: str):
     while True:
         there_are_more_frames, frame = video_streamer.read()
         if not there_are_more_frames:
-            break
+            video_streamer.release()
+            return
 
         yield frame_index, frame
         frame_index += 1
-
-    video_streamer.release()
-    yield frame_index, frame

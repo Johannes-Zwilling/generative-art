@@ -1,6 +1,5 @@
 import cv2
 import os
-from .load_video import load_video
 from typing import Any
 
 
