@@ -1,10 +1,12 @@
 import cv2
 import os
+from .load_video import load_video
+from .write_image import write_image
 
 
 def video_to_frames(video_filename: str, images_output_directory: str):
     # Open the video file
-    video = cv2.VideoCapture(video_filename)
+    video = load_video(video_filename)
 
     # Create a directory to store the frames
     if not os.path.exists(images_output_directory):
@@ -22,9 +24,8 @@ def video_to_frames(video_filename: str, images_output_directory: str):
         if not ret:
             break
 
-        # Save the frame as an image file
         frame_filename = f"{images_output_directory}/frame_{frame_count:04d}.jpg"
-        cv2.imwrite(frame_filename, frame)
+        write_image(frame_filename, frame)
 
         # Increment the frame count
         frame_count += 1
