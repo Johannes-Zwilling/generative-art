@@ -4,7 +4,7 @@ from .load_video import load_video
 from typing import Any
 
 
-def write_image(frame_filename: str, frame: Any):
+def write_image(output_folder: str, frame_filename: str, frame: Any):
     """
     Writes an image to disk using opencv at the prescribed filepath.
 
@@ -16,4 +16,8 @@ def write_image(frame_filename: str, frame: Any):
     frame: Any
         The numPy array containing image data.
     """
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
+
+    frame_filename = f"{output_folder}/{frame_filename}"
     cv2.imwrite(frame_filename, frame)

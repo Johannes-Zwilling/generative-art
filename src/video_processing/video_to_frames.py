@@ -1,5 +1,3 @@
-import cv2
-import os
 from .load_video import load_video
 from .write_image import write_image
 
@@ -9,8 +7,6 @@ def video_to_frames(video_filename: str, images_output_directory: str):
     video = load_video(video_filename)
 
     # Create a directory to store the frames
-    if not os.path.exists(images_output_directory):
-        os.makedirs(images_output_directory)
 
     # Initialize variables
     frame_count = 0
@@ -24,8 +20,7 @@ def video_to_frames(video_filename: str, images_output_directory: str):
         if not ret:
             break
 
-        frame_filename = f"{images_output_directory}/frame_{frame_count:04d}.jpg"
-        write_image(frame_filename, frame)
+        write_image(images_output_directory, "frame_{frame_count:04d}.jpg", frame)
 
         # Increment the frame count
         frame_count += 1
