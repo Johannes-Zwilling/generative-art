@@ -1,7 +1,8 @@
 
 
 
-def load_frame()
+
+def load_frame():
     """
     Loads a frame.
 
@@ -10,3 +11,4 @@ def load_frame()
 
     
     """
+    pass
