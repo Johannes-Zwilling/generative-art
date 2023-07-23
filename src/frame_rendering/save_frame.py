@@ -1,4 +1,4 @@
-# Shoudn't this be simply write_image.py from video_processing?
+# Shoudn't this simply be write_image.py from video_processing?
 
 
 
