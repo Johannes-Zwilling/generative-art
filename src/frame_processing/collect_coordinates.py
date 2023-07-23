@@ -5,15 +5,36 @@
 def collect_coordinates(frame_filename: str,  slices: int):
 
     # Create empty list
+    coordinates = []
 
-    # Take in frame, 
+    x_cord = 0
+    y_cord = 0
+
+    # Take in frame
+    img = 
 
     # Get img.shape[0] (this assumes frame has always aspect ratio of 1:1)
+    
+    # column level
+    for y in range(img.shape[0]):
 
-    # Use slices to derive coordinates
+        # Use slices to derive coordinates
+        if y % step_size != 0:
+                continue
+            y_cord = y
 
-    # Write coordinates to list
+            #row/pixel level
+            for x in range(img.shape[1]):
+                if x % step_size != 0:
+                    continue
+                x_cord = x
 
+                coordinate.append([x_cord, y_cord])
+
+            # Write coordinates to list
+            coordinates.extend(coordinate)
+        
     # Return list
-
-    pass
+    return coordinates
+    
+    #pass
