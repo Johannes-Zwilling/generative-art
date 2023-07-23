@@ -2,10 +2,18 @@
 
 
 
-def collect_coordinates():
+def collect_coordinates(frame_filename: str,  slices: int):
 
-    # How to collect coordinates only once?
-    ## Take in any first frame, get img.shape[0], use slices to derive coordinates
-    # How to store coordinates?
+    # Create empty list
+
+    # Take in frame, 
+
+    # Get img.shape[0] (this assumes frame has always aspect ratio of 1:1)
+
+    # Use slices to derive coordinates
+
+    # Write coordinates to list
+
+    # Return list
 
     pass
