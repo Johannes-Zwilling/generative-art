@@ -1,4 +1,6 @@
-backup
+backup/Export
+backup/notes
+backup/videos
 .DS_Store
 **/__pycache__
 **/*.egg-info
