@@ -11,7 +11,8 @@ def load_frame():
 
     
     """
+    print('Load frame')
 
-    return frame 
+    #return frame 
 
-    #pass
+    pass

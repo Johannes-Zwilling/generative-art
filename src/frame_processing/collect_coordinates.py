@@ -1,7 +1,11 @@
+from .load_frame import load_frame
 
 
+def collect_coordinates():
+     load_frame()
+     print('Collect coordinates')
 
-
+""" 
 def collect_coordinates(frame_filename: str,  slices: int):
 
     # Create empty list
@@ -35,6 +39,8 @@ def collect_coordinates(frame_filename: str,  slices: int):
             coordinates.extend(coordinate)
         
     # Return list
-    return coordinates
+    #return coordinates
     
-    #pass
+    pass 
+
+"""
