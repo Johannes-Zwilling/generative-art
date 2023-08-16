@@ -24,3 +24,7 @@ collect_coordinates:
 # Takes all converted frames and packs them back into a video file
 process_frames_to_video:
 	python ./scripts/versions/03/frames_to_video.py
+
+
+process_whole_repo:
+	python ./scripts/versions/03/all.py

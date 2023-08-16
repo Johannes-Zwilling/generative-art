@@ -1,9 +1,14 @@
 from .load_frame import load_frame
 
 
-def collect_coordinates():
-     load_frame()
+def collect_coordinates(slices: int):
+     load_frame('a')
+     # get shape
+     # use shape with slices to get coordinates 
+     # store how?
      print('Collect coordinates')
+
+
 
 """ 
 def collect_coordinates(frame_filename: str,  slices: int):

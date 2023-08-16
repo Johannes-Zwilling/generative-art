@@ -3,9 +3,10 @@ from .write_image import write_image
 from uuid import uuid4
 
 
-def video_to_frames(video_filename: str, images_output_directory: str):
+
+def video_to_frames(video_path_and_filename: str, images_output_directory: str):
     # Open the video file
-    video_frames = load_video(video_filename)
+    video_frames = load_video(video_path_and_filename)
 
     # Read and save each frame of the video
     frame_count = 0
@@ -17,3 +18,6 @@ def video_to_frames(video_filename: str, images_output_directory: str):
     # Print the total number of frames extracted
     print(f"Total frames extracted: {frame_count}")
     print(f"Successfully extracted images in folder '{uuid_folder_name}'")
+
+    return f"{images_output_directory}/{uuid_folder_name}"
+
