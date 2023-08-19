@@ -1,12 +1,20 @@
 from .load_frame import load_frame
+import cv2
 
 
-def collect_coordinates(slices: int):
-     load_frame('a')
+def collect_coordinates(frames_path: str, slices = 50):
+     img = load_frame()
+
      # get shape
+     #print(img.shape[0])
+
      # use shape with slices to get coordinates 
      # store how?
-     print('Collect coordinates')
+
+     #print('Collect coordinates')
+     print(frames_path)
+
+     #return coordinates
 
 
 

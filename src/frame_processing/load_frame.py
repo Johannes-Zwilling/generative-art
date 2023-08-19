@@ -1,9 +1,9 @@
+import cv2
 
 
-
-def load_frame(frame_path_and_filename: str):
+def load_frame():
     """
-    Loads a frame.
+    Loads an image.
 
     Parameters
     ----------
@@ -16,4 +16,6 @@ def load_frame(frame_path_and_filename: str):
     """
     print('Loading frame from')
 
-    pass
+    #pass
+
+    #return cv2.imread(frame)
